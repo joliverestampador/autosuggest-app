@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import logo from './logo.png';
-import AutoSuggest from './components/AutoSuggest';
+import AutoSuggestContainer from './components/AutoSuggest';
 import { Container, Image, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,7 +15,7 @@ class App extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <AutoSuggest/>
+                    <AutoSuggestContainer />
                 </Row>
             </Container>
         );

@@ -1,0 +1,9 @@
+export const ATTEMPT_FETCH_SEARCH_RESULTS = 'ATTEMPT_FETCH_SEARCH_RESULTS';
+export const SUCCEED_FETCH_SEARCH_RESULTS = 'SUCCEED_FETCH_SEARCH_RESULTS';
+export const FAILED_FETCH_SEARCH_RESULTS = 'FAILED_FETCH_SEARCH_RESULTS';
+
+export const fetchSearchResults = (query) => {
+    return {
+        type: SUCCEED_FETCH_SEARCH_RESULTS,
+    }
+};

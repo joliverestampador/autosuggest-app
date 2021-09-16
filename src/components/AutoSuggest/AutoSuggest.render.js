@@ -1,22 +1,24 @@
 import React from 'react';
-import {Typeahead} from 'react-bootstrap-typeahead';
+import { Typeahead } from 'react-bootstrap-typeahead';
 import { Form } from 'react-bootstrap';
 
-class AutoSuggest extends React.Component {
+export class AutoSuggestPage extends React.Component {
     render() {
         return (
             <Form.Group>
                 <Typeahead
-                    id="basic-typeahead-single"
+                    id="auto-suggest"
                     labelKey="name"
                     options={['Test', 'Something']}
                     placeholder="Search TV shows here"
                     selected={[]}
-                    onChange={() => {}}
+                    onChange={this._handleChange}
+                    onInputChange={this._handleOnInputChange}
+                    onBlur={() => this.props.onSearch()}
                 />
             </Form.Group>
         )
     }
 }
 
-export default AutoSuggest;
+export default AutoSuggestPage;
