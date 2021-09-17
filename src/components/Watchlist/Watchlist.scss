@@ -3,11 +3,12 @@
         padding: 0 !important;
         cursor: pointer;
         position: relative;
-        .row {
-            &.strike-thru {
-                text-decoration: line-through;
-            }
 
+        &.strike-thru {
+            text-decoration: line-through;
+        }
+
+        .row {
             .image-container {
                 max-height: 185px !important;
                 img {

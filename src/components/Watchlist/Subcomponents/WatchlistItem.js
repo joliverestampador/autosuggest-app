@@ -14,22 +14,24 @@ const WatchlistItem = ({ item, onClick, onClose }) => {
     const imageUrl = image ? image.medium : noImage;
 
     return (
-        <Container className="watchlist-item my-2" onClick={() => onClick(id, !isStrikeThru)}>
-            <Row className={strikeThru}>
+        <Container
+            className={`watchlist-item my-2 ${strikeThru}`}
+            onClick={() => onClick(id, !isStrikeThru)}>
+            <Row>
                 <Col sm={2} className="image-container">
                     <Image src={imageUrl} alt={name} />
                 </Col>
                 <Col>
                     <Card className="content-container">
                         <Body>
-                            <Title> <Link href={url}>{name}</Link></Title>
-                            <Subtitle className="mb-2 text-muted">Critics score: {score} %</Subtitle>
+                            <Title><Link href={url}>{name}</Link></Title>
+                            <Subtitle className="mb-2 text-muted">{`Critics score: ${score} %`}</Subtitle>
                             <Text className="summary" dangerouslySetInnerHTML={{ __html: summary }} />
                         </Body>
                     </Card>
                 </Col>
             </Row>
-            <Button className="close-button" variant="danger" onClick={() => onClose(id)}>x</Button>
+            <Button className="close-button" variant="danger" onClick={() => onClose(id)}>&times;</Button>
         </Container>
     );
 };

@@ -12,7 +12,7 @@ export const strikeThruWatchlist = (id, isStrikeThru) => ({
     payload: {id, isStrikeThru},
 });
 
-export const onCloseWatchlistItem = (id) => ({
+export const closeWatchlistItem = (id) => ({
     type: CLOSE_WATCHLIST_ITEM,
     payload: id,
 });

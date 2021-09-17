@@ -5,6 +5,7 @@ export function WatchlistMethodMixins(Component) {
         static propTypes = {
             watchlist: PropTypes.array.isRequired,
             onStrikeThru: PropTypes.func.isRequired,
+            onClose: PropTypes.func.isRequired,
         };
 
         _handleStrikeThru = (id, isStrikeThru) => {

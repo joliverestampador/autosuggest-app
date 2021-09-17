@@ -4,7 +4,7 @@ const initialState = {
     list: [],
 };
 
-const watchlistReducer = (state = initialState, action) => {
+const watchlistReducer = (state = initialState, action = {}) => {
     switch(action.type) {
         case ADD_WATCHLIST:
             return {
