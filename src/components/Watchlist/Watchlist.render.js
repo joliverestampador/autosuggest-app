@@ -8,13 +8,15 @@ export class WatchlistPage extends React.Component {
         return (
             <div className="watchlist">
                 {
-                    watchlist.map((item) => (
-                        <WatchlistItem
-                            item={item}
-                            onClick={this._handleStrikeThru}
-                            onClose={this._handleClose}
-                        />
-                    ))
+                    watchlist.length ? (
+                        watchlist.map((item) => (
+                            <WatchlistItem
+                                item={item}
+                                onClick={this._handleStrikeThru}
+                                onClose={this._handleClose}
+                            />
+                        ))
+                    ) : <h6 className="watchlist-empty text-muted">No TV Shows to watch 📺</h6>
                 }
             </div>
         )

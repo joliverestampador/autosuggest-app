@@ -20,6 +20,7 @@ export class AutoSuggestPage extends React.Component {
                     selected={[]}
                     onChange={this._handleChange}
                     onSearch={this._handleSearch}
+                    emptyLabel="Please refine search query"
                 />
             </div>
         )

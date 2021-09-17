@@ -1,31 +1,37 @@
-.watchlist-item {
-    padding: 0 !important;
-    cursor: pointer;
-    position: relative;
-    .row {
-        &.strike-thru {
-            text-decoration: line-through;
-        }
+.watchlist {
+    &-item {
+        padding: 0 !important;
+        cursor: pointer;
+        position: relative;
+        .row {
+            &.strike-thru {
+                text-decoration: line-through;
+            }
 
-        .image-container {
-            max-height: 185px !important;
-            img {
+            .image-container {
+                max-height: 185px !important;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .content-container {
+                height: 185px;
                 width: 100%;
-                height: 100%;
+                .summary {
+                    height: 100px;
+                    overflow: hidden;
+                }
             }
         }
-        .content-container {
-            height: 185px;
-            width: 100%;
-            .summary {
-                height: 100px;
-                overflow: hidden;
-            }
+        .close-button {
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
-    .close-button {
-        position: absolute;
-        top: 0;
-        right: 0;
+
+    &-empty {
+        text-align: center;
     }
 }
