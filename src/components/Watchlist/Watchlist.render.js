@@ -9,7 +9,11 @@ export class WatchlistPage extends React.Component {
             <div className="watchlist">
                 {
                     watchlist.map((item) => (
-                        <WatchlistItem item={item}/>
+                        <WatchlistItem
+                            item={item}
+                            onClick={this._handleStrikeThru}
+                            onClose={this._handleClose}
+                        />
                     ))
                 }
             </div>

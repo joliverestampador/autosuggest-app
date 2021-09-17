@@ -6,8 +6,7 @@ const AsyncTypeahead = withAsync(Typeahead);
 
 export class AutoSuggestPage extends React.Component {
     render() {
-        const { results, isLoading } = this.props;
-        // const { selected } = this.state;
+        const { isLoading } = this.props;
         return (
             <div className="search-box my-4">
                 <AsyncTypeahead

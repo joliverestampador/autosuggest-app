@@ -1,6 +1,12 @@
 .watchlist-item {
     padding: 0 !important;
+    cursor: pointer;
+    position: relative;
     .row {
+        &.strike-thru {
+            text-decoration: line-through;
+        }
+
         .image-container {
             max-height: 185px !important;
             img {
@@ -16,5 +22,10 @@
                 overflow: hidden;
             }
         }
+    }
+    .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }

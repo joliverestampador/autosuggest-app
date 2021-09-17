@@ -1,16 +1,22 @@
 import React from 'react';
-import { Image, Row, Col, Card, Container } from 'react-bootstrap';
+import { Image, Row, Col, Card, Container, Button } from 'react-bootstrap';
+import noImage from '../../../images/no-image-available.png';
 import '../Watchlist.scss';
 
 const { Body, Title, Text, Link, Subtitle} = Card;
-const WatchlistItem = ({ item }) => {
-    const { score, show = {} } = item;
-    const { image = {}, name, url, summary } = show;
+
+const WatchlistItem = ({ item, onClick, onClose }) => {
+    const { score, show = {}, isStrikeThru = false } = item;
+    const { image, name, url, summary, id } = show;
+
+    const strikeThru = isStrikeThru ? 'strike-thru' : '';
+    const imageUrl = image ? image.medium : noImage;
+
     return (
-        <Container className="watchlist-item my-2">
-            <Row>
+        <Container className="watchlist-item my-2" onClick={() => onClick(id, !isStrikeThru)}>
+            <Row className={strikeThru}>
                 <Col sm={2} className="image-container">
-                    <Image src={image.medium} alt={name} />
+                    <Image src={imageUrl} alt={name} />
                 </Col>
                 <Col>
                     <Card className="content-container">
@@ -22,6 +28,7 @@ const WatchlistItem = ({ item }) => {
                     </Card>
                 </Col>
             </Row>
+            <Button className="close-button" variant="danger" onClick={() => onClose(id)}>x</Button>
         </Container>
     );
 };

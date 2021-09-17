@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import logo from './logo.png';
+import logo from './images/logo.png';
 import AutoSuggestContainer from './components/AutoSuggest';
 import Watchlist from './components/Watchlist';
 import { Container, Image, Row, Col } from 'react-bootstrap';

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import isEmpty from 'lodash/isEmpty';
 
 export function AutoSuggestMethodMixins(Component) {
     class AutoSuggest extends Component {
@@ -17,7 +18,9 @@ export function AutoSuggestMethodMixins(Component) {
             const { results } = this.props;
             const id = selected[0].id;
             const watchlist = results.find(item => item.show.id === id);
-            this.props.onAddWatchlist(watchlist);
+            if (!isEmpty(watchlist)) {
+                this.props.onAddWatchlist(watchlist);
+            }
         };
 
         _handleSearch = (query) => {
