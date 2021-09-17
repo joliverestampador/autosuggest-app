@@ -4,14 +4,15 @@ import logo from './images/logo.png';
 import AutoSuggestContainer from './components/AutoSuggest';
 import Watchlist from './components/Watchlist';
 import { Container, Image, Row, Col } from 'react-bootstrap';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
     render() {
         return (
             <Container className="app">
-                <Row className="justify-content-md-center">
-                    <Col lg="1">
+                <Row>
+                    <Col className="logo">
                         <Image src={logo} height="150" width="150" alt="logo" />
                     </Col>
                 </Row>
