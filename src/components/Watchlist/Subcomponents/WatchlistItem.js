@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image, Row, Col, Card, Container, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import noImage from '../../../images/no-image-available.png';
+import { Image, Row, Col, Card, Container, Button } from 'react-bootstrap';
 import '../Watchlist.scss';
 
 const { Body, Title, Text, Link, Subtitle} = Card;
@@ -31,6 +32,12 @@ const WatchlistItem = ({ item, onClick, onClose }) => {
             <Button className="close-button" variant="danger" onClick={() => onClose(id)}>x</Button>
         </Container>
     );
+};
+
+WatchlistItem.propTypes = {
+    item: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired,
+    onClose: PropTypes.func.isRequired,
 };
 
 export default WatchlistItem;

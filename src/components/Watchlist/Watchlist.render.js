@@ -10,11 +10,13 @@ export class WatchlistPage extends React.Component {
                 {
                     watchlist.length ? (
                         watchlist.map((item) => (
-                            <WatchlistItem
-                                item={item}
-                                onClick={this._handleStrikeThru}
-                                onClose={this._handleClose}
-                            />
+                            <div key={item.show.id}>
+                                <WatchlistItem
+                                    item={item}
+                                    onClick={this._handleStrikeThru}
+                                    onClose={this._handleClose}
+                                />
+                            </div>
                         ))
                     ) : <h6 className="watchlist-empty text-muted">No TV Shows to watch 📺</h6>
                 }

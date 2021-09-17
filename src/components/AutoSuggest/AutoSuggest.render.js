@@ -1,6 +1,5 @@
 import React from 'react';
 import { Typeahead, withAsync } from 'react-bootstrap-typeahead';
-import './AutoSuggest.scss';
 
 const AsyncTypeahead = withAsync(Typeahead);
 
