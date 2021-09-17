@@ -5,7 +5,7 @@ const initialState = {
     results: [],
 };
 
-const searchReducer = (state = initialState, action) => {
+const searchReducer = (state = initialState, action = {}) => {
     switch(action.type) {
         case ATTEMPT_FETCH_SEARCH_RESULTS:
             return {

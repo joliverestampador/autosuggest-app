@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { fetchSearchResults } from './Action';
+import { addWatchlist } from '../Watchlist/Action';
 import MethodMixins from './AutoSuggest.methods';
 import Render from './AutoSuggest.render';
-import {addWatchlist} from '../Watchlist/Action';
 
 export const AutoSuggestContainer = MethodMixins(Render);
 export const mapStateToProps = (state) => {

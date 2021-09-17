@@ -11,15 +11,15 @@ export class AutoSuggestPage extends React.Component {
                 <AsyncTypeahead
                     delay={500} // debounce
                     isLoading={isLoading}
-                    options={this._getOptions()}
+                    selected={[]}
                     id="auto-suggest"
                     placeholder="Search TV shows here"
                     promptText="Search TV shows here"
                     searchText="searching tv shows..."
-                    selected={[]}
+                    emptyLabel="Please refine search query"
+                    options={this._getOptions()}
                     onChange={this._handleChange}
                     onSearch={this._handleSearch}
-                    emptyLabel="Please refine search query"
                 />
             </div>
         )
