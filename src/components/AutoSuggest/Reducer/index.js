@@ -2,7 +2,7 @@ import {ATTEMPT_FETCH_SEARCH_RESULTS, FAILED_FETCH_SEARCH_RESULTS, SUCCEED_FETCH
 
 const initialState = {
     loading: false,
-    data: [],
+    results: [],
 };
 
 const searchReducer = (state = initialState, action) => {
@@ -15,17 +15,13 @@ const searchReducer = (state = initialState, action) => {
         case SUCCEED_FETCH_SEARCH_RESULTS:
             return {
                 ...state,
-                data: [
-                    'test1',
-                    'test2',
-                    'test3',
-                    'test4',
-                ],
-                loading: true,
+                loading: false,
+                results: action.payload,
             };
         case FAILED_FETCH_SEARCH_RESULTS:
             return {
                 ...state,
+                results: [],
                 loading: false,
             };
         default:

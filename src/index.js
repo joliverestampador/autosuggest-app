@@ -9,14 +9,10 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const middleware = [thunk];
 
-const initialState = {
-  test: {},
-};
-
 ReactDOM.render(
     <Provider store={createStore(
         reducers,
-        initialState,
+        {},
         composeWithDevTools(
             applyMiddleware(...middleware) // enable dev tools im browser
         )
